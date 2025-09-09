@@ -9,20 +9,6 @@ public class FindDuplicates {
         // replace "return null" with your code:
 
         List<Integer> output = new ArrayList<Integer>();
-
-        for (int i = 0; i < l.size(); i++) {
-            for (int j = 0; j < l.size(); j++) {
-                  if (l.get(i) == l.get(j) && !output.contains(l.get(i))) output.add(l.get(i));
-            }
-        }
-        
-        return output;
-    }
-
-    public static List<Integer> findDuplicatesHashMap(List<Integer> l) {
-        // replace "return null" with your code:
-
-        List<Integer> output = new ArrayList<Integer>();
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 
         for (Integer number : l) {
@@ -34,7 +20,6 @@ public class FindDuplicates {
 
         return output;
     }
-    
 
     public static void main(String[] args) {
         // some test strings:
@@ -46,17 +31,6 @@ public class FindDuplicates {
         System.out.println("Sample 2: " + findDuplicatesNestedLoops(sample2));
         System.out.println("Sample 3: " + findDuplicatesNestedLoops(sample3));
         System.out.println("Sample 4: " + findDuplicatesNestedLoops(sample4));
-
-
-      
-        List<Integer> sample5 = new ArrayList<Integer>(Arrays.asList(3, 7, 5, 6, 7, 4, 8, 5, 7, 66));
-        List<Integer> sample6 = new ArrayList<Integer>(Arrays.asList(3, 5, 6, 4, 4, 5, 66, 6, 7, 6));
-        List<Integer> sample7 = new ArrayList<Integer>(Arrays.asList(3, 0, 5, 1, 0));
-        List<Integer> sample8 = new ArrayList<Integer>(Arrays.asList(3));
-        System.out.println("Sample 1: " + findDuplicatesHashMap(sample5));
-        System.out.println("Sample 2: " + findDuplicatesHashMap(sample6));
-        System.out.println("Sample 3: " + findDuplicatesHashMap(sample7));
-        System.out.println("Sample 4: " + findDuplicatesHashMap(sample8));
     }
 
 }
